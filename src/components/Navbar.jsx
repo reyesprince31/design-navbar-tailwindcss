@@ -1,8 +1,13 @@
 import { useState } from "react";
 import logoInverted from "/img/logo-inverted.svg";
+import MobileMenuButton from "./MobileMenuButton";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <header className="bg-gray-900 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
@@ -11,24 +16,7 @@ function Navbar() {
           <img className="h-8" src={logoInverted} alt="Workcation" />
         </div>
         <div className="sm:hidden">
-          <button
-            type="button"
-            onClick={() => setIsOpen(!isOpen)}
-            className="block text-gray-500 hover:text-white focus:text-white focus:outline-none">
-            <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
-              {isOpen ? (
-                <path
-                  fillRule="evenodd"
-                  d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
-                />
-              ) : (
-                <path
-                  fillRule="evenodd"
-                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-                />
-              )}
-            </svg>
-          </button>
+          <MobileMenuButton toOpen={isOpen} toggleMenu={toggleMenu} />
         </div>
       </div>
       <div
