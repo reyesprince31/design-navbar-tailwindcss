@@ -23,7 +23,7 @@ function AccountDropdown() {
   }
 
   return (
-    <div className="relative ml-6">
+    <div className="relative hidden sm:ml-6 sm:block">
       <button
         onClick={toggleDropdown}
         className="relative z-10 block h-8 w-8 rounded-full overflow-hidden border-2 border-gray-600 focus:border-white">
