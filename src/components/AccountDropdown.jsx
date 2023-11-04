@@ -1,6 +1,6 @@
 function AccountDropdown() {
   return (
-    <div>
+    <div className="relative ml-6">
       <button className="block h-8 w-8 rounded-full overflow-hidden border-2 border-gray-600">
         <img
           className="h-full w-full object-cover"
@@ -8,7 +8,7 @@ function AccountDropdown() {
           alt="Your avatar"
         />
       </button>
-      <div className="bg-white rounded-lg py-2 w-48 mt-2 shadow-xl">
+      <div className="bg-white rounded-lg py-2 w-48 mt-2 shadow-xl absolute right-0">
         <a
           className="block px-4 py-2 hover:bg-indigo-500 hover:text-white"
           href="#">

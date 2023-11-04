@@ -1,6 +1,7 @@
 import { useState } from "react";
 import logoInverted from "/img/logo-inverted.svg";
 import MobileMenuButton from "./MobileMenuButton";
+import AccountDropdown from "./AccountDropdown";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,6 +39,7 @@ function Navbar() {
           className="block text-white font-semibold hover:bg-gray-800 px-2 py-1 mt-1 sm:ml-2">
           Messages
         </a>
+        <AccountDropdown />
       </div>
     </header>
   );
